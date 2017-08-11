@@ -6,7 +6,7 @@
 /*   By: rlecart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/15 08:05:54 by rlecart           #+#    #+#             */
-/*   Updated: 2017/06/09 05:34:09 by rlecart          ###   ########.fr       */
+/*   Updated: 2017/08/11 15:47:48 by rlecart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memalloc(size_t size)
 	void	*alloc;
 
 	if (!(alloc = malloc(size)))
-		return (NULL);
+		exit(-1);
 	ft_memset(alloc, 0, size);
 	return (alloc);
 }

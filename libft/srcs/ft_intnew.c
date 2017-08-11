@@ -6,7 +6,7 @@
 /*   By: rlecart <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/01 17:33:44 by rlecart           #+#    #+#             */
-/*   Updated: 2017/06/09 05:34:08 by rlecart          ###   ########.fr       */
+/*   Updated: 2017/08/11 15:49:33 by rlecart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int		*ft_intnew(size_t len)
 {
-	int			*i;
-	size_t		j;
+	int		*tab;
+	size_t	i;
 
-	j = 0;
-	if (!(i = (int*)malloc(sizeof(int) * len)))
-		return (NULL);
-	while (j < len)
-		i[j++] = 0;
-	return (i);
+	i = 0;
+	tab = ft_memalloc(len);
+	while (i < len)
+		tab[i++] = 0;
+	return (tab);
 }
