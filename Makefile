@@ -6,7 +6,7 @@
 #    By: rlecart <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/29 00:43:30 by rlecart           #+#    #+#              #
-#    Updated: 2017/08/10 20:05:43 by rlecart          ###   ########.fr        #
+#    Updated: 2017/08/18 02:31:35 by rlecart          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ $(BINDIR):
 
 clean:
 	@make -s -C libft clean
-	@printf "$(YELLOW)[$(PROJECT)] Removing bin..."
+	@printf "$(YELLOW)[$(PROJECT)] Removing objs..."
 	@rm -rf $(OBJ1)
 	@rm -rf $(OBJ2)
 	@rm -rf $(BINDIR)
@@ -68,15 +68,17 @@ clean:
 
 fclean:
 	@make -s -C libft fclean
-	@printf "$(YELLOW)[$(PROJECT)] Removing bin..."
+	@printf "$(YELLOW)[$(PROJECT)] Removing objs..."
 	@rm -rf $(OBJ1)
 	@rm -rf $(OBJ2)
 	@rm -rf $(BINDIR)
-	@printf "\r$(GREEN)[$(PROJECT)] Bin removed.                                                   \n$(NO_COLOR)"
-	@printf "$(YELLOW)[$(PROJECT)] Removing $(NAME)..."
+	@printf "\r$(GREEN)[$(PROJECT)] objs removed.                                                  \n$(NO_COLOR)"
+	@printf "$(YELLOW)[$(PROJECT)] Removing $(NAME1)..."
 	@rm -rf $(NAME1)
+	@printf "\r$(GREEN)[$(PROJECT)] $(NAME1) removed.                                              \n$(NO_COLOR)"
+	@printf "$(YELLOW)[$(PROJECT)] Removing $(NAME2)..."
 	@rm -rf $(NAME2)
-	@printf "\r$(GREEN)[$(PROJECT)] $(NAME) removed.                                               \n$(NO_COLOR)"
+	@printf "\r$(GREEN)[$(PROJECT)] $(NAME2) removed.                                              \n$(NO_COLOR)"
 
 re: fclean all
 
